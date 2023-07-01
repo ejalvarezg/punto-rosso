@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Crear Producto</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href=estilos/styles.css>
+  </head>
+
+  <body>
+    <!--
+
+
+        ### THE HEADER ###
+
+
+    -->
+    <header id="header">
+      <div class="titulo">
+        <div></div>
+        <div class="logo">
+          <img src="imagenes/logoNew.png" alt="Logo del local" />
+        </div>
+        <div class="bandera">
+          <img src="imagenes/espana.png" alt="bandera Española" />
+        </div>
+      </div>
+      <div class="cont-menu">
+        <input type="checkbox" id="btn-menu" />
+        <label for="btn-menu"
+          ><img
+            src="imagenes/icono-menu.png"
+            alt="imagen icono-menu"
+            class="pinta"
+        /></label>
+        <nav class="menu">
+          <ul class="cont-nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+            <li>
+              <a href="#">Idioma</a>
+              <ul>
+                <li><a href="productos.html">Español</a></li>
+                <li><a href="product.html">Ingles</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="barra-amarilla"></div>
+    <div class="barra-verde"></div>
+
+    <!--
+
+
+        ### MAIN ###
+
+
+    -->
+    <main>
+      <div class="container" id="app">
+        <form
+          style="
+            background-color: aliceblue;
+            margin: 10px auto;
+            width: 400px;
+            padding: 20px;
+          ">
+          <h1>Alta de Producto</h1>
+          <div class="mb-3">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" v-model="nombre" />
+          </div>
+          <div class="mb-3">
+            <label for="precio">Precio</label>
+            <input type="number" name="precio" id="precio" v-model="precio" />
+          </div>
+          <div class="mb-3">
+            <label for="stock">Stock</label>
+            <input type="number" name="stock" id="stock" v-model="stock" />
+          </div>
+          <div class="mb-3">
+            <label for="celiaco">¿Apto celiaco?</label>
+            <input
+              type="checkbox"
+              value="true"
+              name="celiaco"
+              id="celiaco"
+              v-model="celiaco" />
+          </div>
+
+          <button type="button" class="btn btn-success" v-on:click="grabar()">
+            Grabar
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <!--
+
+
+        ### THE FOOTER ###
+
+
+    -->
+    <div class="barra-amarilla"></div>
+    <footer class="footer">
+      <div class="cont-footer">
+        <div class="foot1">
+          <a href="pedidos.html">
+            <h4>DELIVERY</h4>
+            <span class="bike"> <i class="fa-solid fa-person-biking"></i></span>
+          </a>
+          <p class="p-negr">Envíos a domicilio</p>
+          <p class="p-negr">sin cargo</p>
+          <br />
+        </div>
+        <div class="foot2">
+          <h4>CONTACTO</h4>
+          <p>Julián Álvarez 2486 - Palermo</p>
+          <p><strong>Tel</strong>: (011) 4826-4437</p>
+          <p>Buenos Aires - Argentina</p>
+        </div>
+        <div class="foot3">
+          <h4>SEGUINOS</h4>
+          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+
+          <p class="hor-sep"><strong>Horario:</strong></p>
+          <p>Dom a Jue de 12 PM a 12 AM</p>
+          <p>Vie y Sáb de 12 PM a 01 AM</p>
+        </div>
+      </div>
+      <div class="copy">
+        <p>© 2023 Punto Rosso │ Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <!-- 
+        
+        
+        ### Bootstrap JavaScript Libraries ###
+    
+    
+    
+    -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/productos.js"></script>
+  </body>
+</html>

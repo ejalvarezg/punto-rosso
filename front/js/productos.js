@@ -61,7 +61,7 @@ createApp({
         nombre: this.nombre,
         precio: this.precio,
         stock: this.stock,
-        imagen: this.celiaco,
+        celiaco: this.celiaco,
       };
 
       // Configurar las opciones para la solicitud fetch

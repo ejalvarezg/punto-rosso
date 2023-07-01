@@ -1,216 +1,365 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="imagenes/logo-helado.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="imagenes/logo-helado.png"
+      type="image/x-icon" />
     <link rel="stylesheet" href=estilos/styles.css>
-    <script src="https://kit.fontawesome.com/57e1f5bf87.js" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+      .btn-animate {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .btn-animate:hover {
+        transform: scale(1.1);
+        /* Aumenta el tamaño del botón */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        /* Agrega una sombra */
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/57e1f5bf87.js"
+      crossorigin="anonymous"></script>
     <title>Productos</title>
-</head>
-<body>
-    <header>
-        <div class="titulo">
-            <div> </div>
-           <div class="logo">
-             <img  src="imagenes/logoNew.png"  alt="Logo del local">              
-           </div>
-           <div class="bandera">
-            <img src="imagenes/espana.png" alt="bandera Española">            
-           </div>
+  </head>
+  <body>
+    <!--
+
+
+        ### THE HEADER ###
+
+
+    -->
+    <header id="header">
+      <div class="titulo">
+        <div></div>
+        <div class="logo">
+          <img src="imagenes/logoNew.png" alt="Logo del local" />
         </div>
-       <div class="cont-menu">
-        <input type="checkbox" id="btn-menu">
-        <label for="btn-menu"><img src="imagenes/icono-menu.png" alt="imagen icono-menu" class="pinta"></label>
+        <div class="bandera">
+          <img src="imagenes/espana.png" alt="bandera Española" />
+        </div>
+      </div>
+      <div class="cont-menu">
+        <input type="checkbox" id="btn-menu" />
+        <label for="btn-menu"
+          ><img
+            src="imagenes/icono-menu.png"
+            alt="imagen icono-menu"
+            class="pinta"
+        /></label>
         <nav class="menu">
-            <ul class="cont-nav">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="pedidos.html">Pedidos</a></li>
-                <li><a href="#">Idioma</a>
-                    <ul>
-                        <li><a href="productos.html">Español</a></li>
-                        <li><a href="product.html">Ingles</a></li>
-                    </ul>
-                </li>
-                
-            </ul>
-          </nav>
-        </div>
-        
+          <ul class="cont-nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+            <li>
+              <a href="#">Idioma</a>
+              <ul>
+                <li><a href="productos.html">Español</a></li>
+                <li><a href="product.html">Ingles</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-        <div class="barra-amarilla"></div>
-        <div class="barra-verde"></div>
-
-    <main class="fondo">
-        <div class="cont-productos">
-            <div class="titulo-main">Nuestros Productos</div>
-        </div>
-
-        <!--Presentaciones-->
-        <div class="tit-sec">
-            <h2>Presentaciones</h2>
-        </div>
-        <div class="row-p">
-            <div class="column-p">
-                <img src="imagenes/paletas2.jpg" alt="Paletas" style="width:100%" height="100%">
-            </div>
-            <div class="column-p">
-                <img src="imagenes/kilo.jpg" alt="Kilo" style="width:100%" height="100%">
-            </div>
-            <div class="column-p">
-                <img src="imagenes/productos3.jpg" alt="Cucurucho" style="width:100%" height="100%">
-            </div>
-            <div class="column-p">
-                <img src="imagenes/vaso2.jpg" alt="vasito" style="width:100%" height="100%">
-            </div>
-        </div>
-
-        <div class="row-p">
-            <div class="column-p c1">
-                <div class="desc">Paletas</div>
-                <ul class="lista">
-                    <li>Chocolate Kinder</li>
-                    <li>Chocotorta</li>
-                    <li>Frutilla a la Crema</li>
-                </ul>
-            </div>
-            <div class="column-p c2">
-                <div class="desc">Kilo</div>
-                <ul class="lista">
-                    <li>1 Kilo</li>
-                    <li>1/2 Kilo</li>
-                    <li>1/4 Kilo</li>
-                </ul>
-            </div>
-            <div class="column-p c3">
-                <div class="desc">Cucuruchos</div>
-                <ul class="lista">
-                    <li>Mini Cucurucho 1 gusto</li>
-                    <li>Cucurucho 2 gustos</li>
-                    <li>Cucurucho Bañado</li>
-                </ul>
-            </div>
-            <div class="column-p c4">
-                <div class="desc">Vasos</div>
-                <ul class="lista">
-                    <li>Vaso 1 gusto</li>
-                    <li>Vaso 2 gustos</li>
-                    <li>Vaso de Pasta</li>
-                </ul>
-            </div>
-        
-        </div>
-
-        <!--Gustos-->
-        <div class="tit-sec" >
-           <h2 >Gustos</h2>
-         </div>
-        <div class="row">
-            <div class="column">
-                <img src="imagenes/helado-de-vainilla.jpg" alt="cremas" style="width:100%" height="100%">
-            </div>
-            <div class="column">
-                <img src="imagenes/fresa.jpg" alt="Frutales" style="width:100%" height="100%">
-            </div>
-            <div class="column">
-                <img src="imagenes/ddl.jpg" alt="Dulce de Leche" style="width:100%" height="100%">
-            </div>
-            <div class="column">
-                <img src="imagenes/cuciniana-receta-dulce-postre-helado-chocolate-cacao-1600-.jpg" alt="Cremas"
-                    style="width:100%" height="100%">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="column c1">
-                <div class="desc">Cremas</div>
-                <ul class="lista">
-                    <li>Crema Tramontana</li>
-                    <li>Sambayón</li>
-                    <li>Granizado</li>
-                    <li>Almendrado</li>
-                    <li>Menta Granizada</li>
-                </ul>
-            </div>
-            <div class="column c2">
-                <div class="desc">Frutales</div>
-                <ul class="lista">
-                    <li>Limón al Agua</li>
-                    <li>Hibiscus Lemon</li>
-                    <li>Frutilla</li>
-                    <li>Frambuesa</li>
-                    <li>Frutos del Bosque</li>
-                </ul>
-            </div>
-            <div class="column c3">
-                <div class="desc">Dulce de Leche</div>
-                <ul class="lista">
-                    <li>Dulce de Leche</li>
-                    <li>Dulce de Leche Granizado</li>
-                    <li>Dulce de Leche Bombón</li>
-                    <li>Dulce de Leche Bariloche</li>
-                    <li>Súper Dulce de Leche</li>
-                </ul>
-            </div>
-            <div class="column c4">
-                <div class="desc">Chocolate</div>
-                <ul class="lista">
-                    <li>Chocolate Amargo</li>
-                    <li>Chocolate Rocher</li>
-                    <li>Chocolate Suizo</li>
-                    <li>Chocolate Blanco</li>
-                    <li>Chocolate con Almendras</li>
-
-                </ul>
-            </div>
-
-        </div>
-     
-    </main>
     <div class="barra-amarilla"></div>
-    <footer class="footer">        
-        <div class="cont-footer">
-            <div class="foot1">
-                <a href="pedidos.html">
-                    <h4>DELIVERY</h4>
-                    <span class="bike"> <i class="fa-solid fa-person-biking" ></i></span>                
-                </a>
-                <p class="p-negr">Envíos a domicilio</p>
-                <p class="p-negr">sin cargo</p>
-                <br>   
+    <div class="barra-verde"></div>
 
-                
-                                                 
-            </div>
-            <div class="foot2">
-                <h4>CONTACTO</h4>
-                <p>Julián Álvarez 2486 - Palermo</p>
-                <p><strong>Tel</strong>: (011) 4826-4437 </p> 
-                <p>Buenos Aires - Argentina</p>  
-                    
-                    
-            </div>
-            <div class="foot3">
-                <h4>SEGUINOS</h4>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                
-                <p class="hor-sep"><strong>Horario:</strong></p>
-                <p>Dom a Jue de 12 PM a 12 AM</p> 
-                <p>Vie y Sáb de 12 PM a 01 AM</p>   
-                                                                
-            </div>
+    <!--
+
+
+        ### MAIN ###
+
+
+    -->
+    <main class="fondo">
+      <div class="cont-productos">
+        <div class="titulo-main">Nuestros Productos</div>
+      </div>
+
+      <!--Presentaciones-->
+      <div class="tit-sec">
+        <h2>Presentaciones</h2>
+      </div>
+      <div class="row-p">
+        <div class="column-p">
+          <img
+            src="imagenes/paletas2.jpg"
+            alt="Paletas"
+            style="width: 100%"
+            height="100%" />
         </div>
-        <div class="copy">
-            <p>© 2023 Punto Rosso │ Todos los derechos reservados</p>
-          </div>
+        <div class="column-p">
+          <img
+            src="imagenes/kilo.jpg"
+            alt="Kilo"
+            style="width: 100%"
+            height="100%" />
+        </div>
+        <div class="column-p">
+          <img
+            src="imagenes/productos3.jpg"
+            alt="Cucurucho"
+            style="width: 100%"
+            height="100%" />
+        </div>
+        <div class="column-p">
+          <img
+            src="imagenes/vaso2.jpg"
+            alt="vasito"
+            style="width: 100%"
+            height="100%" />
+        </div>
+      </div>
+
+      <div class="row-p">
+        <div class="column-p c1">
+          <div class="desc">Paletas</div>
+          <ul class="lista">
+            <li>Chocolate Kinder</li>
+            <li>Chocotorta</li>
+            <li>Frutilla a la Crema</li>
+          </ul>
+        </div>
+        <div class="column-p c2">
+          <div class="desc">Kilo</div>
+          <ul class="lista">
+            <li>1 Kilo</li>
+            <li>1/2 Kilo</li>
+            <li>1/4 Kilo</li>
+          </ul>
+        </div>
+        <div class="column-p c3">
+          <div class="desc">Cucuruchos</div>
+          <ul class="lista">
+            <li>Mini Cucurucho 1 gusto</li>
+            <li>Cucurucho 2 gustos</li>
+            <li>Cucurucho Bañado</li>
+          </ul>
+        </div>
+        <div class="column-p c4">
+          <div class="desc">Vasos</div>
+          <ul class="lista">
+            <li>Vaso 1 gusto</li>
+            <li>Vaso 2 gustos</li>
+            <li>Vaso de Pasta</li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Gustos-->
+      <div class="tit-sec">
+        <h2>Gustos</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img
+            src="imagenes/helado-de-vainilla.jpg"
+            alt="cremas"
+            style="width: 100%"
+            height="100%" />
+        </div>
+        <div class="column">
+          <img
+            src="imagenes/fresa.jpg"
+            alt="Frutales"
+            style="width: 100%"
+            height="100%" />
+        </div>
+        <div class="column">
+          <img
+            src="imagenes/ddl.jpg"
+            alt="Dulce de Leche"
+            style="width: 100%"
+            height="100%" />
+        </div>
+        <div class="column">
+          <img
+            src="imagenes/cuciniana-receta-dulce-postre-helado-chocolate-cacao-1600-.jpg"
+            alt="Cremas"
+            style="width: 100%"
+            height="100%" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column c1">
+          <div class="desc">Cremas</div>
+          <ul class="lista">
+            <li>Crema Tramontana</li>
+            <li>Sambayón</li>
+            <li>Granizado</li>
+            <li>Almendrado</li>
+            <li>Menta Granizada</li>
+          </ul>
+        </div>
+        <div class="column c2">
+          <div class="desc">Frutales</div>
+          <ul class="lista">
+            <li>Limón al Agua</li>
+            <li>Hibiscus Lemon</li>
+            <li>Frutilla</li>
+            <li>Frambuesa</li>
+            <li>Frutos del Bosque</li>
+          </ul>
+        </div>
+        <div class="column c3">
+          <div class="desc">Dulce de Leche</div>
+          <ul class="lista">
+            <li>Dulce de Leche</li>
+            <li>Dulce de Leche Granizado</li>
+            <li>Dulce de Leche Bombón</li>
+            <li>Dulce de Leche Bariloche</li>
+            <li>Súper Dulce de Leche</li>
+          </ul>
+        </div>
+        <div class="column c4">
+          <div class="desc">Chocolate</div>
+          <ul class="lista">
+            <li>Chocolate Amargo</li>
+            <li>Chocolate Rocher</li>
+            <li>Chocolate Suizo</li>
+            <li>Chocolate Blanco</li>
+            <li>Chocolate con Almendras</li>
+          </ul>
+        </div>
+      </div>
+
+      <!--
 
 
+        ### PRODUCTOS TRAIDOS DESDE PYTHONANYWHERE ###
+
+
+    -->
+      <div id="app" class="container">
+        <h1>Productos</h1>
+        <br />
+        <!-- <a class="btn btn-primary" href="producto-create.html">Nuevo</a> -->
+        <!-- <a class="btn btn-primary btn-animate" href="producto-create.html">Nuevo</a> -->
+        <a
+          class="btn btn-primary animate__animated animate__heartBeat btn-animate"
+          href="producto-create.html"
+          >Nuevo producto</a
+        >
+        <br /><br />
+        <div v-if="error">
+          <p>Lo sentimos, ha ocurrido un error.</p>
+        </div>
+        <div v-else>
+          <section v-if="cargando">
+            <div class="spinner-border"></div>
+            <p>Cargando...</p>
+          </section>
+          <section v-else>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Apto celiacos</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Iterar sobre cada producto -->
+                  <tr class="" v-for="producto in productos">
+                    <td scope="row">{{producto.id}}</td>
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.precio}}</td>
+                    <td>{{producto.stock}}</td>
+                    <td>{{producto.celiaco}}</td>
+                    <td>
+                      <!-- Botón para editar el producto -->
+                      <a
+                        class="btn btn-primary"
+                        :href="'producto-update.html?id='+ producto.id"
+                        >Editar</a
+                      >
+                      <!-- Botón para eliminar el producto -->
+                      <button
+                        type="button"
+                        class="btn btn-danger"
+                        v-on:click="eliminar(producto.id)">
+                        Eliminar
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div class="barra-amarilla"></div>
+    <footer class="footer">
+      <div class="cont-footer">
+        <div class="foot1">
+          <a href="pedidos.html">
+            <h4>DELIVERY</h4>
+            <span class="bike"> <i class="fa-solid fa-person-biking"></i></span>
+          </a>
+          <p class="p-negr">Envíos a domicilio</p>
+          <p class="p-negr">sin cargo</p>
+          <br />
+        </div>
+        <div class="foot2">
+          <h4>CONTACTO</h4>
+          <p>Julián Álvarez 2486 - Palermo</p>
+          <p><strong>Tel</strong>: (011) 4826-4437</p>
+          <p>Buenos Aires - Argentina</p>
+        </div>
+        <div class="foot3">
+          <h4>SEGUINOS</h4>
+          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+
+          <p class="hor-sep"><strong>Horario:</strong></p>
+          <p>Dom a Jue de 12 PM a 12 AM</p>
+          <p>Vie y Sáb de 12 PM a 01 AM</p>
+        </div>
+      </div>
+      <div class="copy">
+        <p>© 2023 Punto Rosso │ Todos los derechos reservados</p>
+      </div>
     </footer>
-</body>
+
+    <!-- Enlace de Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--Enlace de VUE-->
+    <script src="./js/productos.js"></script>
+  </body>
 </html>
