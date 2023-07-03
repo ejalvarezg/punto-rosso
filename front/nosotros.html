@@ -1,159 +1,213 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="imagenes/logo-helado.png" type="image/x-icon">
-    <link rel="stylesheet" href=estilos/styles.css>
-    <script src="https://kit.fontawesome.com/57e1f5bf87.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./imagenes/mini.svg" type="image/x-icon" />
+    <link rel="stylesheet" href=./css/main.css>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet" />
     <title>Nosotros</title>
-</head>
-<body>
-    <header>
-        <div class="titulo">
-            <div> </div>
-           <div class="logo">
-             <img  src="imagenes/logoNew.png"  alt="Logo del local">              
-           </div>
-           <div class="bandera">
-            <img src="imagenes/espana.png" alt="bandera Española">            
-           </div>
-        </div>
-       <div class="cont-menu">
-        <input type="checkbox" id="btn-menu">
-        <label for="btn-menu"><img src="imagenes/icono-menu.png" alt="imagen icono-menu" class="pinta"></label>
-        <nav class="menu">
-            <ul class="cont-nav">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="pedidos.html">Pedidos</a></li>
-                <li><a href="#">Idioma</a>
-                    <ul>
-                        <li><a href="nosotros.html">Español</a></li>
-                        <li><a href="abaut.html">Ingles</a></li>
-                    </ul>
-                </li>
-                
-            </ul>
-          </nav>
-        </div>
-      </header>
-        <div class="barra-amarilla"></div>
-        <div class="barra-verde"></div>
+  </head>
+  <body>
+    <header id="header"></header>
 
-    <main class="main-nosotros">
-        <div class="nos-main">
-            <section class="nos-titulo">
-               <div class="nos-titulo-container">
-                 <h2>Nuestra Historia</h2>
-               </div>
-            </section>
-            <section class="nos-historia">
-               <div class="historia-container">
-                <h2>Sobre Nosotros</h2>
-                 <p>En 1998, en el corazón de Buenos Aires, nació una pequeña heladería artesanal que pronto se convertiría en el clásico de Palermo. La historia comenzó con dos amigos de la infancia, Martín y Ana, quienes compartían una pasión por los helados de calidad y decidieron crear algo propio.
-                 Al principio, la heladería era muy pequeña y solo ofrecía unos pocos sabores de helado. Pero con el tiempo, la reputación de "Punto Rosso" comenzó a crecer hasta convertirse en un destino popular para los amantes del helado artesanal.</p>
-                 <p>
-                 Los dueños siempre se enorgullecieron de utilizar ingredientes naturales y de alta calidad. A medida que la heladería crecía, los amigos también comenzaron a ofrecer sabores más creativos y únicos, como el Hibiscus Lemon y el Rooibos Caramel-Vainilla.</p>
-                 <p>
-                 A pesar de los altibajos de la economía argentina, la heladería siguió creciendo y prosperando a lo largo de los años. Hoy en día, "Punto Rosso" sigue siendo una de las favoritas de los palermitanos, ya que es conocida por su compromiso con la calidad y la creatividad. La heladería ha crecido mucho, sin embargo para los dueños lo más importante es la felicidad y la satisfacción de sus clientes, quienes siguen regresando una y otra vez para disfrutar de sus deliciosos helados.
-                 </p>
-               </div>
-            </section>
-            <section class="nos-galeria">
-                <div class="galeria-container" id="tablet-laptop">
-                    <h2></h2>
-                    <img src="./imagenes/nos_img/img_06.jpg" alt="helado_6">
-                    <img src="./imagenes/nos_img/img_03.jpg" alt="helado_3">
-                    <img src="./imagenes/nos_img/img_07.jpg" alt="helado_7">
-                    <img src="./imagenes/nos_img/img_08.jpg" alt="helado_8">
-                    <img src="./imagenes/nos_img/img_10.jpg" alt="helado_10" id="hide">
-                    <img src="./imagenes/nos_img/img_04.jpg" alt="helado_4" id="hide">
-                    <img src="./imagenes/nos_img/img_05.jpg" alt="helado_5" id="hide">
-                    <img src="./imagenes/nos_img/img_09.jpg" alt="helado_9" id="hide">
-                    <img src="./imagenes/nos_img/img_01.jpg" alt="helado_1" id="hide">
-                    <img src="./imagenes/nos_img/img_02.jpg" alt="helado_2" id="hide">
-                </div>
-                <div class="galeria-container sliders" id="mobil">
-                    <ul>
-                        <li><img src="./imagenes/nos_img/img_06.jpg" alt="helado_6"></li>
-                        <li><img src="./imagenes/nos_img/img_03.jpg" alt="helado_3"></li>
-                        <li><img src="./imagenes/nos_img/img_07.jpg" alt="helado_7"></li>
-                        <li><img src="./imagenes/nos_img/img_08.jpg" alt="helado_8"></li>
-                        <li><img src="./imagenes/nos_img/img_10.jpg" alt="helado_10"></li>
-                    </ul>
-                </div>
-            </section>
-            <section class="nos-equipo">
-                <div class="equipo">
-                    <h2>Nuestro Equipo</h2>
-                    <div class="equipo-container">
-                        <div class="nos-item img-1">
-                            <h3>Martín</h3>
-                            <img src="./imagenes/nos_img/Martin-modified.jpg" alt="Martin">
-                            <p>Apasionado por su trabajo, siempre busca ofrecer la mejor calidad y sabor a sus clientes. Es un emprendedor perseverante y dedicado que ha logrado hacer de su pequeño negocio un gran éxito en el barrio de Palermo.</p>
-                        </div>
-                        <div class="nos-item img-2">
-                            <h3>Ana</h3>
-                            <img src="./imagenes/nos_img/Ana-modified.jpg" alt="Ana">
-                            <p>Dedicada y perfeccionista, siempre busca ofrecer los mejores sabores y texturas en sus helados. Su amabilidad y carisma le ha permitido que su heladería se convierta en un lugar acogedor y entrañable para los amantes de los helados.</p>
-                        </div>
-                        <div class="nos-item img-3">
-                            <h3>Leticia</h3>
-                            <img src="./imagenes/nos_img/leticia-modified.jpg" alt="Gabriela">
-                            <p>Enérgica y entusiasta, contribuye a que la heladería sea un lugar agradable y acogedor. Es una persona comprometida que  disfruta de la interacción con los clientes y de ser parte de un equipo que comparte su pasión.
-                            </p>
-                        </div>
-                </div>
-
-            </section>
-            
+    <main>
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <h1 class="text-center pt-5">Nuestra Historia</h1>
         </div>
+
+        <div class="pt-5">
+          <h2 class="py-3 border-bottom border-primary">
+            Sobre Nosotros
+            <small class="fs-5 text-muted">Una heladería familiar</small>
+          </h2>
+          <p class="pt-3">
+            En 1998, en el corazón de Buenos Aires, nació una pequeña heladería
+            artesanal que pronto se convertiría en el clásico de Palermo. La
+            historia comenzó con dos amigos de la infancia, Martín y Ana,
+            quienes compartían una pasión por los helados de calidad y
+            decidieron crear algo propio. Al principio, la heladería era muy
+            pequeña y solo ofrecía unos pocos sabores de helado. Pero con el
+            tiempo, la reputación de "Punto Rosso" comenzó a crecer hasta
+            convertirse en un destino popular para los amantes del helado
+            artesanal.
+          </p>
+          <p class="pt-3">
+            Los dueños siempre se enorgullecieron de utilizar ingredientes
+            naturales y de alta calidad. A medida que la heladería crecía, los
+            amigos también comenzaron a ofrecer sabores más creativos y únicos,
+            como el Hibiscus Lemon y el Rooibos Caramel-Vainilla.
+          </p>
+          <p class="pt-3">
+            A pesar de los altibajos de la economía argentina, la heladería
+            siguió creciendo y prosperando a lo largo de los años. Hoy en día,
+            "Punto Rosso" sigue siendo una de las favoritas de los palermitanos,
+            ya que es conocida por su compromiso con la calidad y la
+            creatividad. La heladería ha crecido mucho, sin embargo para los
+            dueños lo más importante es la felicidad y la satisfacción de sus
+            clientes, quienes siguen regresando una y otra vez para disfrutar de
+            sus deliciosos helados.
+          </p>
+        </div>
+
+        <!-- Galería -->
+        <div class="row pt-5 pb-5">
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img
+              src="./imagenes/nos_img/img_06.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="helado cucurucho" />
+
+            <img
+              src="./imagenes/nos_img/img_03.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="pote de helado" />
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img
+              src="./imagenes/nos_img/img_02.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="bochas de helado" />
+
+            <img
+              src="./imagenes/nos_img/img_04.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="cucurucho" />
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img
+              src="./imagenes/nos_img/img_10.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="bocha en pote plástico" />
+
+            <img
+              src="./imagenes/nos_img/img_07.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Yosemite National Park" />
+          </div>
+        </div>
+
+        <div class="equipo">
+          <div class="row d-flex justify-content-center">
+            <h1 class="text-center pt-5 pb-5">Nuestro Equipo</h1>
+          </div>
+
+          <div class="row">
+            <!-- Martin -->
+            <div class="equipo__col col-md-6 col-sm-12 mb-3">
+              <div
+                class="col-md-12 w-100 h-100 d-inline-block p-3 position-relative rounded overflow-hidden">
+                <img
+                  class="position-absolute top-0 bottom-0 end-0 start-0"
+                  src="./imagenes/nos_img/martin.jpg"
+                  alt="Martin"
+                  loading="lazy" />
+                <div
+                  class="contenido position-absolute bottom-0 end-0 start-0 p-2 mb-0 text-white">
+                  <h3 class="text-center pb-2 border-bottom border-white">
+                    Martín <small class="fs-5 text-muted">Gerente</small>
+                  </h3>
+                  <p class="p-chico">
+                    Apasionado por su trabajo, siempre busca ofrecer la mejor
+                    calidad y sabor a sus clientes. Es un emprendedor
+                    perseverante y dedicado que ha logrado hacer de su pequeño
+                    negocio un gran éxito en el barrio de Palermo.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ana -->
+            <div class="equipo__col col-md-6 col-sm-12 mb-3">
+              <div
+                class="col-md-12 w-100 h-100 d-inline-block p-3 position-relative rounded overflow-hidden">
+                <img
+                  class="position-absolute top-0 bottom-0 end-0 start-0"
+                  src="./imagenes/nos_img/ana.jpg"
+                  alt="Ana"
+                  loading="lazy" />
+                <div
+                  class="contenido position-absolute bottom-0 end-0 start-0 p-2 mb-0 text-white">
+                  <h3 class="text-center pb-2 border-bottom border-white">
+                    Ana <small class="fs-5 text-muted">Maestra heladera</small>
+                  </h3>
+                  <p class="p-chico">
+                    Dedicada y perfeccionista, siempre busca ofrecer los mejores
+                    sabores y texturas en sus helados. Su amabilidad y carisma
+                    le ha permitido que su heladería se convierta en un lugar
+                    acogedor y entrañable para los amantes de los helados.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Leticia -->
+            <div class="equipo__col col-md-6 col-sm-12 mb-3">
+              <div
+                class="col-md-12 w-100 h-100 d-inline-block p-3 position-relative rounded overflow-hidden">
+                <img
+                  class="position-absolute top-0 bottom-0 end-0 start-0"
+                  src="./imagenes/nos_img/leticia.jpg"
+                  alt="Leticia"
+                  loading="lazy" />
+                <div
+                  class="contenido position-absolute bottom-0 end-0 start-0 p-2 mb-0 text-white">
+                  <h3 class="text-center pb-2 border-bottom border-white">
+                    Leticia <small class="fs-5 text-muted">Heladera</small>
+                  </h3>
+                  <p class="p-chico">
+                    Enérgica y entusiasta, contribuye a que la heladería sea un
+                    lugar agradable y acogedor. Es una persona comprometida que
+                    disfruta de la interacción con los clientes y de ser parte
+                    de un equipo que comparte su pasión.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gabriela -->
+            <div class="equipo__col col-md-6 col-sm-12 mb-3">
+              <div
+                class="col-md-12 w-100 h-100 d-inline-block p-3 position-relative rounded overflow-hidden">
+                <img
+                  class="position-absolute top-0 bottom-0 end-0 start-0"
+                  src="./imagenes/nos_img/gabriela.jpg"
+                  alt="Gabriela"
+                  loading="lazy" />
+                <div
+                  class="contenido position-absolute bottom-0 end-0 start-0 p-2 mb-0 text-white">
+                  <h3 class="text-center pb-2 border-bottom border-white">
+                    Gabriela <small class="fs-5 text-muted">Heladera</small>
+                  </h3>
+                  <p class="p-chico">
+                    Comprometida con que nuestros clientes se sientan a gusto y
+                    disfruten el tiempo que permanencen en nuestro local. Es
+                    capaz de hacer los cucuruchos más grandes que hayas visto!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
+    <footer id="footer" class="bg-primary-opacity-8 border-top"></footer>
 
-    <div class="barra-amarilla"></div>
-    <footer class="footer"> 
-    <div class="cont-footer">
-        <div class="foot1">
-            <a href="pedidos.html">
-                <h4>DELIVERY</h4>
-                <span class="bike"> <i class="fa-solid fa-person-biking" ></i></span>                
-            </a>
-            <p class="p-negr">Envíos a domicilio</p>
-            <p class="p-negr">sin cargo</p>
-            <br>   
-
-            
-                                             
-        </div>
-        <div class="foot2">
-            <h4>CONTACTO</h4>
-            <p>Julián Álvarez 2486 - Palermo</p>
-            <p><strong>Tel</strong>: (011) 4826-4437 </p> 
-            <p>Buenos Aires - Argentina</p>  
-                
-                
-        </div>
-        <div class="foot3">
-            <h4>SEGUINOS</h4>
-            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-            
-            <p class="hor-sep"><strong>Horario:</strong></p>
-            <p>Dom a Jue de 12 PM a 12 AM</p> 
-            <p>Vie y Sáb de 12 PM a 01 AM</p>                                                               
-        </div>
-    </div>
-    <div class="copy">
-        <p>© 2023 Punto Rosso │ Todos los derechos reservados</p>
-      </div>
-
-    </footer>
-    
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script src="./css/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/header-es.js"></script>
+    <script src="./js/footer-es.js"></script>
+  </body>
 </html>

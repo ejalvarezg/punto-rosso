@@ -1,108 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="imagenes/logo-helado.png" type="image/x-icon">
-    <link rel="stylesheet" href=estilos/styles.css>
-    <script src="https://kit.fontawesome.com/57e1f5bf87.js" crossorigin="anonymous"></script>
-    <title>Heladeria</title>
-</head>
-<body>
-    <header>
-        <div class="titulo">
-            <div> </div>
-            <div class="logo">
-                <img src="imagenes/logoNew.png" alt="Logo del local">
-            </div>
-            <div class="bandera">
-                <img src="imagenes/espana.png" alt="bandera Española">
-            </div>
-        </div>
-        <div class="cont-menu">
-            <input type="checkbox" id="btn-menu">
-            <label for="btn-menu"><img src="imagenes/menu-mobile.png" alt="imagen icono-menu" class="pinta"></label>
-            <nav class="menu">
-                <ul class="cont-nav">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="pedidos.html">Pedidos</a></li>
-                    <li><a href="#">Idioma</a>
-                        <ul>
-                            <li><a href="index.html">Español</a></li>
-                            <li><a href="home.html">Inglés</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="barra-amarilla"></div>
-    <div class="barra-verde"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./imagenes/mini.svg" type="image/x-icon" />
+    <link rel="stylesheet" href=./css/main.css>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet" />
+    <title>Inicio</title>
+  </head>
+  <body>
+    <header id="header"></header>
 
     <main>
-        <div class="contenedor-main">
-            <div class="slider">
-                <ul>
-                    <li><img src="imagenes/banner1.jpg" alt="foto 1"></li>
-                    <li><img src="imagenes/banner2.jpg" alt="foto 2"></li>
-                    <li><img src="imagenes/banner3.jpg" alt="foto 3"></li>
-                    <li><img src="imagenes/banner4.jpg" alt="foto 4"></li>
-                </ul>
+      <!-- ********** CARRUSEL ********** -->
+      <div class="container mt-3 pb-5">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./imagenes/banner1.jpg"
+                class="d-block w-100"
+                alt="..." />
             </div>
-        </div>
-        <div class="promo">
-            <div class="promo-p"><p>¿Con qué te vas a deleitar hoy?</p></div>
-            <div class="promo-img-container">
-                <div class="main-item im1"><img src="imagenes/promos1.png" alt="promo1"></div>
-                <div class="main-item im2"><img src="imagenes/promos2.png" alt="promo2"></div>
-                <div class="main-item im3"><img src="imagenes/promos3.png" alt="promo3"></div>
+            <div class="carousel-item">
+              <img
+                src="./imagenes/banner2.jpg"
+                class="d-block w-100"
+                alt="..." />
             </div>
+            <div class="carousel-item">
+              <img
+                src="./imagenes/banner3.jpg"
+                class="d-block w-100"
+                alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previo</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">siguiente</span>
+          </button>
         </div>
+      </div>
+      <!-- ********** FIN CARRUSEL ********** -->
+
+      <section class="promos pb-5">
+        <div class="row d-flex justify-content-center">
+          <h1 class="text-center pt-5">Promos</h1>
+          <p class="w-50 text-center">
+            Conocé y aprovechá nuestras ofertas del mes!
+          </p>
+        </div>
+        <div class="container">
+          <div class="row pt-5 pb-5">
+            <div class="promos__col col-md-4 col-sm-12 mb-3">
+              <img src="imagenes/promo1.jpg" alt="promo1" />
+            </div>
+            <div class="promos__col col-md-4 col-sm-12 mb-3">
+              <img src="imagenes/promo2.jpg" alt="promo2" />
+            </div>
+            <div class="promos__col col-md-4 col-sm-12 mb-3">
+              <img src="imagenes/promo3.jpg" alt="promo3" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <div class="barra-amarilla"></div>
-    <footer class="footer">
-        <div class="cont-footer">
-            <div class="foot1">
-                <a href="pedidos.html">
-                    <h4>DELIVERY</h4>
-                    <span class="bike"> <i class="fa-solid fa-person-biking"></i></span>
-                </a>
-                <p class="p-negr">Envíos a domicilio</p>
-                <p class="p-negr">sin cargo</p>
-                <br>
+    <footer id="footer" class="bg-primary-opacity-8 border-top"></footer>
 
-
-
-            </div>
-            <div class="foot2">
-                <h4>CONTACTO</h4>
-                <p>Julián Álvarez 2486 - Palermo</p>
-                <p><strong>Tel</strong>: (011) 4826-4437 </p>
-                <p>Buenos Aires - Argentina</p>
-
-
-            </div>
-            <div class="foot3">
-                <h4>SEGUINOS</h4>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-
-                <p class="hor-sep"><strong>Horario:</strong></p>
-                <p>Dom a Jue de 12 PM a 12 AM</p>
-                <p>Vie y Sáb de 12 PM a 01 AM</p>
-
-            </div>
-        </div>
-        <div class="copy">
-            <p>© 2023 Punto Rosso │ Todos los derechos reservados</p>
-        </div>
-    </footer>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script src="./css/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/header-es.js"></script>
+    <script src="./js/footer-es.js"></script>
+  </body>
 </html>

@@ -21,10 +21,7 @@ createApp({
   },
   methods: {
     fetchData(url) {
-      /**El método fetchData realiza una solicitud HTTP utilizando la función fetch a la URL especificada.
-       * Luego, los datos de respuesta se convierten en formato JSON y se asignan al arreglo productos.
-       * Además, se actualiza la variable cargando para indicar que la carga de productos ha finalizado.
-       * En caso de producirse un error, se muestra en la consola y se establece la variable error en true.
+      /**El método fetchData realiza una solicitud HTTP utilizando la función fetch a la URL especificada. Luego, los datos de respuesta se convierten en formato JSON y se asignan al arreglo productos. Además, se actualiza la variable cargando para indicar que la carga de productos ha finalizado. En caso de producirse un error, se muestra en la consola y se establece la variable error en true.
        *
        */
       fetch(url)
