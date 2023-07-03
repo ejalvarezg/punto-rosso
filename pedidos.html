@@ -1,153 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./imagenes/mini.svg" type="image/x-icon" />
-    <link rel="stylesheet" href=./css/main.css>
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-      rel="stylesheet" />
-    <title>Pedidos</title>
-  </head>
 
-  <body>
-    <header id="header"></header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./imagenes/mini.svg" type="image/x-icon" />
+  <link rel="stylesheet" href=./css/main.css>
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <title>Pedidos</title>
+</head>
 
-    <main class="main-pedidos">
-      <div class="contenedor-pedidos">
-        <section class="cont-hor-zon">
-          <div class="contenedor-horario">
-            <div class="img-deliv">
-              <img src="imagenes/bike.png" alt="imagen de bike" />
-            </div>
-            <div class="horario">
-              <h3 id="h3">Horario para delivery</h3>
-              <div class="img-hor">
-                <img src="imagenes/Horario1.jpg" alt="imagen h" />
-              </div>
-            </div>
-          </div>
-        </section>
+<body>
+  <header id="header"></header>
 
-        <section class="zona-entrega">
-          <h3 id="h3">Límites de zona de entrega</h3>
-          <p>La zona delimitada dentro de las siguientes avenidas:</p>
-          <p>Av. Dorrego, Av. Cordoba, Av. Callao y Av. Libertador</p>
 
-          <div class="zona-mapa">
-            <img src="imagenes/zona Entrega.jpg" alt="mapa zona" />
-          </div>
-        </section>
+  <main class="container">
 
-        <section class="zona-estamos">
-          <p>Nuestra ubicacion en el mapa interactivo</p>
-          <div class="maps">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.7004364039362!2d-58.416596052762685!3d-34.58644570025978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5eb48df9933%3A0x44ecc7019908ec80!2sJuli%C3%A1n%20%C3%81lvarez%202486%2C%20C1425%20CABA!5e0!3m2!1ses!2sar!4v1682422368111!5m2!1ses!2sar"
-              width="100%"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </section>
-
-        <!-- FORMULARIO CONECTADO A API -->
-        <section class="formulario">
-          <div class="contenedor-form">
-            <div class="cabecera">
-              <h3 id="h3">Datos del Cliente</h3>
-            </div>
-            <form
-              id="my-form"
-              action="https://formspree.io/f/moqzzqoe"
-              method="POST">
-              <div class="form-control">
-                <label for="nombre"><br />&nbsp;NOMBRE</label>
-                <input
-                  id="nombre"
-                  name="nombre"
-                  type="text"
-                  placeholder="Escribe tu nombre o nick"
-                  required />
-                <p></p>
-              </div>
-
-              <div class="form-control">
-                <label for="direccion">&nbsp;DIRECCIÓN</label>
-                <input
-                  id="direccion"
-                  name="direccion"
-                  type="text"
-                  placeholder="Escribe tu dirección"
-                  required />
-                <p></p>
-              </div>
-
-              <div class="form-control">
-                <label for="email">&nbsp;E-MAIL</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Escribe tu e-mail"
-                  required />
-                <p></p>
-              </div>
-
-              <div class="form-control">
-                <label for="telefono"
-                  >&nbsp;TEL. O CELULAR - Ej.: CABA (011) 6505-1234</label
-                >
-                <input
-                  id="telefono"
-                  name="telefono"
-                  type="tel"
-                  placeholder="Con código de área y sin intercalar 15"
-                  required />
-                <p></p>
-              </div>
-
-              <div class="form-control">
-                <label for="comentario">&nbsp;PEDIDO</label>
-                <textarea
-                  name="comentario"
-                  id="comentario"
-                  cols="50"
-                  rows="5"
-                  placeholder="Escriba su pedido aqui.."
-                  required></textarea>
-                <p></p>
-              </div>
-              <!-- <input type="submit" /> -->
-
-              <button id="my-form-button">ENVIAR</button>
-              <p id="my-form-status"></p>
-              <!-- "Thanks for your submission!"
-                  "Oops! There was a problem submitting your form"
-                  -->
-            </form>
-          </div>
-        </section>
+    <!-- Horarios -->
+    <div class="row d-flex pt-5 justify-content-center">
+      <div class="col-md-3"></div>
+      <div class="col-md-6 col-sm-12 d-flex align-items-center justify-content-center">
+        <div class="px-3"><img src="./imagenes/delivery4.svg" alt="imagen de bike" /></div>
+        <div class="px-3">
+          <h1 class="text-center">Pedidos</h1>
+          <p class="w-100 text-center">Hacé tu pedido</p>
+        </div>
       </div>
-    </main>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="table-responsive pt-5">
+      <table class="table align-middle text-center">
+        <thead>
+          <tr>
+            <th class="bg-amarillo" scope="col">Día</th>
+            <th class="bg-amarillo" scope="col">Lunes</th>
+            <th class="bg-amarillo" scope="col">Martes</th>
+            <th class="bg-amarillo" scope="col">Miércoles</th>
+            <th class="bg-amarillo" scope="col">Jueves</th>
+            <th class="bg-amarillo" scope="col">Viernes</th>
+            <th class="bg-amarillo" scope="col">Sábado</th>
+            <th class="bg-amarillo" scope="col">Domingo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Horario</th>
+            <td>Cerrado</td>
+            <td>Cerrado</td>
+            <td>12:00 a 23:45</td>
+            <td>12:00 a 23:45</td>
+            <td>12:00 a 00:45</td>
+            <td>12:00 a 00:45</td>
+            <td>12:00 a 23:45</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <footer id="footer" class="bg-primary-opacity-8 border-top"></footer>
+    <!-- FORMULARIO CONECTADO A API -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"></script>
-    <!-- <script
+    <div class="row pt-5">
+      <h2 class="py-3 border-bottom border-primary ">
+        Orden
+        <small class="fs-5 text-muted">¿Qué querés probar hoy?</small>
+      </h2>
+
+      <div class="d-flex align-items-center justify-content-center mt-5 mb-5">
+        <form id="my-form" class="bg-gris p-5 border border-amarillo rounded" action="https://formspree.io/f/moqzzqoe"
+          method="POST">
+          <div class="mb-3">
+            <h2 class="py-3 text-center">
+              Tus datos
+            </h2>
+          </div>
+          <div class="control mb-3">
+            <label class="form-label" for="nombre-cliente">Nombre</label>
+            <input class="form-control" id="nombre-cliente" name="nombre-cliente" type="text"
+              placeholder="Escribe tu nombre" required />
+          </div>
+          <div class="control mb-3">
+            <label class="form-label" for="direccion">Dirección</label>
+            <input class="form-control" id="direccion" name="direccion" type="text" placeholder="Escribe tu dirección"
+              required />
+          </div>
+          <div class="control mb-3">
+            <label class="form-label" for="email">E-mail</label>
+            <input class="form-control" id="email" name="email" type="email" placeholder="Escribe tu e-mail" required />
+          </div>
+          <div class="control mb-3">
+            <label class="form-label" for="telefono">Teléfono</label>
+            <input class="form-control" id="telefono" name="telefono" type="tel"
+              placeholder="Con código de área y sin 15" required />
+          </div>
+          <div class="control mb-3">
+            <label class="form-label" for="comentario">Pedido</label>
+            <textarea class="form-control" name="comentario" id="comentario" cols="50" rows="5"
+              placeholder="Escriba su pedido aqui..." required></textarea>
+          </div>
+
+          <div class="d-grid gap2">
+            <button type="submit" class="btn btn-primary text-white" id="my-form-button">
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <p id="my-form-status"></p>
+    </div>
+
+    <!-- Zona de entrega -->
+    <div class="row pt-5 pb-5">
+      <h2 class="py-3 border-bottom border-primary">
+        Entrega
+        <small class="fs-5 text-muted">límite de zonas</small>
+      </h2>
+      <p class="pt-3">
+        La zona delimitada dentro de las calles: Av. Dorrego, Av. Libertador, Rodríguez Peña, Av. Córdoba, Av. Estado de Israel y Loyola.
+      </p>
+
+      <div class="ratio ratio-16x9 rounded">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1mFg5qZDSzrkMLuLXOgnxszg70CrEs4c&ehbc=2E312F"
+          title="YouTube video" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="footer" class="bg-primary-opacity-8 border-top"></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"></script> -->
-      <script src="./css/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./js/header-es.js"></script>
-    <script src="./js/footer-es.js"></script>
-    <script src="./js/app2-es.js"></script>
-  </body>
+  <script src="./css/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./js/header-es.js"></script>
+  <script src="./js/footer-es.js"></script>
+  <script src="./js/app-es.js"></script>
+</body>
+
 </html>

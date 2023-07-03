@@ -12127,6 +12127,13 @@ textarea.form-control-lg {
   height: 30px;
   margin-right: 5px;
 }
+.announcement-bar .dropdown .dropdown-menu {
+  background-color: var(--bs-gris);
+}
+.announcement-bar .dropdown a {
+  font-size: 0.7rem;
+  color: var(--bs-primary-opacity-8);
+}
 @media (max-width: 991.98px) {
   .announcement-bar {
     display: none;

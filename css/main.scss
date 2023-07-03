@@ -15,14 +15,14 @@ $theme-colors: (
   "blanco": $blanco,
   "amarillo": $amarillo,
   "negro": $negro,
-  "eliminar": $eliminar
+  "eliminar": $eliminar,
 );
 
 // Create my own map
 $custom-color: (
   "icon-background": rgba(77, 161, 172, 0.2),
   "primary-opacity-8": rgba(77, 161, 172, 0.8),
-  "negro-opacity-1": rgba(34, 29, 35, 0.1)
+  "negro-opacity-1": rgba(34, 29, 35, 0.1),
 );
 
 // Merge maps
@@ -73,6 +73,16 @@ $utilities: (
         height: 30px;
         margin-right: 5px;
       }
+    }
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      background-color: var(--bs-gris);
+    }
+    a {
+      font-size: 0.7rem;
+      color: var(--bs-primary-opacity-8);
     }
   }
 
@@ -129,7 +139,6 @@ $utilities: (
     width: 9%;
   }
 }
-
 
 /****************** PROMOS ******************/
 

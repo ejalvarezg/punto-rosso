@@ -1,6 +1,4 @@
-document.getElementById(
-    "header"
-).innerHTML = `<!-- announcement-bar -->
+document.getElementById("header").innerHTML = `<!-- announcement-bar -->
 <div class="announcement-bar pt-2 pb-2">
 <div class="container">
 <div class="row">
@@ -26,27 +24,20 @@ document.getElementById(
   <div class="col-md-8 d-flex justify-content-end">
     <ul class="announcement-bar__list">
       <li>
-        <i class="bi bi-clock rounded-circle"></i> Mié-Jue-Dom de 12 a
-        00hs / Vie-Sáb de 12 a 01hs
+        <i class="bi bi-clock rounded-circle"></i> Wed-Thu-Sun 12 to
+        00hs / Fri-Sat 12 to 01hs
       </li>
       <li>
         <i class="bi bi-geo-alt-fill rounded-circle"></i> Julian Alvarez
         2486
       </li>
-      <li>
-        <a class="text-decoration-none" href="#">Language</a>
-        <ul>
-          <li>
-            <a class="text-decoration-none" href="productos.html"
-              >Spanish</a
-            >
-          </li>
-          <li>
-            <a class="text-decoration-none" href="products.html"
-              >English</a
-            >
-          </li>
-        </ul>
+      <li class="dropdown">
+        <a class="dropdown-toggle text-decoration-none" href="#" id="dropdownId"
+           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+         <div class="dropdown-menu" aria-labelledby="dropdownId">
+           <a class="dropdown-item text-decoration-none" href="index.html">Spanish</a>
+           <a class="dropdown-item text-decoration-none" href="home.html">English</a>
+        </div>
       </li>
     </ul>
   </div>

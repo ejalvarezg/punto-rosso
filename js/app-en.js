@@ -1,6 +1,6 @@
 window.addEventListener('load', ()=> {
     const form = document.getElementById('my-form')
-    const nombre = document.getElementById('nombre')
+    const nombre = document.getElementById('nombre-cliente')
     const direccion = document.getElementById('direccion')
     const email = document.getElementById('email')
     const telefono = document.getElementById('telefono')
@@ -27,7 +27,7 @@ window.addEventListener('load', ()=> {
     if (!nombreValor){
       validaFalla(nombre, "This data is required")
     } else if (nombreValor.length < 4){
-    validaFalla(nombre, "Ercribe minimo 4 caracteres")
+    validaFalla(nombre, "At least 4 characters required")
     } else {
      validaOk(nombre);
     }
@@ -37,7 +37,7 @@ window.addEventListener('load', ()=> {
     if (!direccionValor){
        validaFalla(direccion, "This data is required")
     } else if (direccionValor.length < 8){
-      validaFalla(direccion, "Ercribe minimo 8 caracteres")
+      validaFalla(direccion, "At least 8 characters required")
     } else {
       validaOk(direccion);
     }
@@ -70,14 +70,14 @@ window.addEventListener('load', ()=> {
         const aviso = formControl.querySelector('p')
         aviso.innerText = msje
     
-        formControl.className = 'form-control falla'
+        formControl.className = 'control falla'
     }
     const validaOk = (input,msje) => {
         const formControl = input.parentElement
         const aviso = formControl.querySelector('p')
         aviso.innerText = msje
 
-        formControl.className = 'form-control ok'
+        formControl.className = 'control ok'
     }
     const validaEmail = (email) =>{
         return /^[a-zA-Z0-9_-]+(\.[_a-zA-Z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/.test(email);
@@ -104,7 +104,7 @@ async function handleSubmit(event) {
   })
     .then((response) => {
       if (response.ok) {
-        status.innerHTML = "Gracias por contactarnos!";
+        status.innerHTML = "Your order've sent!";
         form.reset();
       } else {
         response.json().then((data) => {
@@ -114,14 +114,14 @@ async function handleSubmit(event) {
               .join(", ");
           } else {
             status.innerHTML =
-              "Ups! Hubo un problema al enviar la información. Por favor, intenta nuevamente";
+              "Ups! There was a problem. Please, try again later.";
           }
         });
       }
     })
     .catch((error) => {
       status.innerHTML =
-        "Ups! Hubo un problema al enviar la información. Por favor, intenta nuevamente";
+      "Ups! There was a problem. Please, try again later.";
     });
 }
 form.addEventListener("submit", handleSubmit)

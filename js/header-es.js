@@ -1,6 +1,4 @@
-document.getElementById(
-    "header"
-).innerHTML = `<!-- announcement-bar -->
+document.getElementById("header").innerHTML = `<!-- announcement-bar -->
 <div class="announcement-bar pt-2 pb-2">
 <div class="container">
 <div class="row">
@@ -33,20 +31,13 @@ document.getElementById(
         <i class="bi bi-geo-alt-fill rounded-circle"></i> Julian Alvarez
         2486
       </li>
-      <li>
-        <a class="text-decoration-none" href="#">Idioma</a>
-        <ul>
-          <li>
-            <a class="text-decoration-none" href="productos.html"
-              >Español</a
-            >
-          </li>
-          <li>
-            <a class="text-decoration-none" href="product.html"
-              >Ingles</a
-            >
-          </li>
-        </ul>
+      <li class="dropdown">
+        <a class="dropdown-toggle text-decoration-none" href="#" id="dropdownId"
+           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Idioma</a>
+         <div class="dropdown-menu" aria-labelledby="dropdownId">
+           <a class="dropdown-item text-decoration-none" href="index.html">Español</a>
+           <a class="dropdown-item text-decoration-none" href="home.html">Inglés</a>
+        </div>
       </li>
     </ul>
   </div>
