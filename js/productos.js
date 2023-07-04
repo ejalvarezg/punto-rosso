@@ -83,5 +83,53 @@ createApp({
   },
   created() {
     this.fetchData(this.url);
+
+    var elVue = this;
+
+    document
+      .getElementById("formularioBusqueda")
+      .addEventListener("submit", function (event) {
+        // Evitar que el formulario se envíe de forma predeterminada
+        event.preventDefault();
+
+        // Obtener el valor del campo de búsqueda
+        var textoBuscado = document.getElementsByName("textoBuscado")[0].value;
+        if (textoBuscado != "") {
+          elVue.cargando = true;
+
+          // Realizar una solicitud fetch para enviar los datos del formulario a la ruta Flask
+          fetch(
+            "https://ejalvarezg.pythonanywhere.com/productos/busqueda/" +
+              textoBuscado
+          )
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (data) {
+              // Mostrar los productos que coinciden con el término de búsqueda
+              elVue.productos = data;
+              elVue.cargando = false;
+              //   document.getElementById("res-busqueda").innerHTML =
+              //     `<h3 class="py-3 border-bottom border-primary mb-2">
+              //   Resultados <small class="fs-5 text-muted">de la busqueda: ` +
+              //     textoBuscado +
+              //     `</small>
+              // </h3>`;
+              // document.getElementById("res-busqueda-title").innerText = "Resultados";
+              // document.getElementById("res-busqueda-cont").innerText = "de tu búsqueda:" + textoBuscado;
+              document.getElementById("res-busqueda").innerHTML =
+                `Resultados <small class="fs-5 text-muted">de la busqueda: ` +
+                textoBuscado +
+                `</small>`;
+            })
+            .catch((err) => {
+              console.error(err);
+              elVue.error = true;
+              alert("Error al buscar productos.");
+            });
+        } else {
+          elVue.fetchData(elVue.url);
+        }
+      });
   },
 }).mount("#app");
