@@ -1,161 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./imagenes/mini.svg" type="image/x-icon" />
+    <link rel="stylesheet" href=./css/main.css>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet" />
+    <title>Productos</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./imagenes/mini.svg" type="image/x-icon" />
-  <link rel="stylesheet" href=./css/main.css>
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-  <style>
-    .btn-animate {
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-
-    .btn-animate:hover {
-      transform: scale(1.1);
-      /* Aumenta el tamaño del botón */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      /* Agrega una sombra */
-    }
-  </style>
-  <title>Productos</title>
-</head>
-
-<body>
-  <header id="header"></header>
-  <!--
+  <body>
+    <header id="header"></header>
+    <!--
 
 
         ### MAIN ###
 
 
     -->
-  <main class="container">
-    <div class="row d-flex justify-content-center">
-      <h1 class="text-center py-5">Nuestros productos</h1>
-    </div>
+    <main class="container">
+      <div class="row d-flex justify-content-center">
+        <h1 class="text-center py-5">Nuestros productos</h1>
+      </div>
 
-    <!--
+      <!--
 
 
         ### PRODUCTOS TRAIDOS DESDE PYTHONANYWHERE ###
 
 
     -->
-    <div id="app" class="container">
-      <h2 id="res-busqueda" class="py-3 border-bottom border-primary mb-5">
-        Gustos
-        <small class="fs-5 text-muted">stock de nuestros sabores</small>
-      </h2>
-      <!-- <a class="btn btn-primary" href="producto-create.html">Nuevo</a> -->
-      <!-- <a class="btn btn-primary btn-animate" href="producto-create.html">Nuevo</a> -->
-      <a class="btn btn-primary animate__animated animate__heartBeat btn-animate text-white mb-3"
-        href="producto-create.html">Nuevo producto</a>
-      <div v-if="error">
-        <p>Lo sentimos, ha ocurrido un error.</p>
-      </div>
-      <div v-else>
-        <div v-if="cargando">
-          <div class="spinner-border"></div>
-          <p>Cargando...</p>
-        </div>
-        <div class="table-responsive" v-else>
-          <table class="table table-hover align-middle">
-            <thead>
-              <tr class="text-center">
-                <th scope="col">Id</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Stock</th>
-                <th scope="col">Apto celiacos</th>
-                <th scope="col">Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Iterar sobre cada producto -->
-              <tr v-for="producto in productos">
-                <td class="text-center" scope="row">{{producto.id}}</td>
-                <td class="px-4">{{producto.nombre}}</td>
-                <td class="text-center">{{producto.precio}}</td>
-                <td class="text-center">{{producto.stock}}</td>
-                <td class="text-center">{{producto.celiaco}}</td>
-                <td class="text-center">
-                  <!-- Botón para editar el producto -->
-                  <a class="btn btn-outline-primary mx-3 my-1"
-                    :href="'producto-update.html?id='+ producto.id">Editar</a>
-                  <!-- Botón para eliminar el producto -->
-                  <button type="button" class="btn btn-outline-eliminar" v-on:click="eliminar(producto.id)">
-                    Eliminar
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
 
-    <!--Presentaciones-->
-    <div class="presentaciones">
-      <h2 class="py-3 border-bottom border-primary">
-        Presentaciones
-        <small class="fs-5 text-muted">Nuestros productos</small>
-      </h2>
-      <div class="row">
-        <div class="col-md-3 col-sm-12">
-          <img src="./imagenes/paletas2.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Paletas" />
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <img src="./imagenes/kilo.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Kilo" />
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <img src="./imagenes/productos3.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Cucurucho" />
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <img src="./imagenes/vaso2.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="vasito" />
-        </div>
+      <div class="d-flex justify-content-center align-items-center mb-5">
+        <form
+          class="row d-flex my-2 p-4 border border-dashed border-primary rounded"
+          name="busqueda"
+          method="POST"
+          action=""
+          id="formularioBusqueda">
+          <div class="mb-3">
+            <label class="form-label mb-3" for="textoBuscado">Búsqueda de sabores</label>
+            <input
+              id="textoBuscado"
+              class="form-control"
+              type="text"
+              placeholder="Escribe tu gusto"
+              name="textoBuscado" />
+          </div>
+          <div class="d-grid">
+            <button
+              class="btn btn-primary my-2 my-sm-0 text-white"
+              type="submit">
+              Buscar
+            </button>
+          </div>
+        </form>
       </div>
 
-      <div class="row pb-5">
-        <div class="col-md-3 col-sm-12">
-          <h4 class="text-center">Paletas</h4>
-          <ul class="list-group">
-            <li class="list-group-item">Chocolate Kinder</li>
-            <li class="list-group-item">Chocotorta</li>
-            <li class="list-group-item">Frutilla a la Crema</li>
-          </ul>
+      <!-- 
+
+        #app
+
+      -->
+      <div id="app" class="container">
+        <h2 id="res-busqueda" class="py-3 border-bottom border-primary mb-5">
+          Gustos
+          <small class="fs-5 text-muted">stock de nuestros sabores</small>
+        </h2>
+        <!-- <a class="btn btn-primary" href="producto-create.html">Nuevo</a> -->
+        <!-- <a class="btn btn-primary btn-animate" href="producto-create.html">Nuevo</a> -->
+
+        <a class="btn btn-primary text-white mb-4" href="producto-create.html"
+          >Nuevo producto</a
+        >
+
+        <div v-if="error">
+          <p>Lo sentimos, ha ocurrido un error.</p>
         </div>
-        <div class="col-md-3 col-sm-12">
-          <h4 class="text-center">Kilo</h4>
-          <ul class="list-group">
-            <li class="list-group-item">1 Kilo</li>
-            <li class="list-group-item">1/2 Kilo</li>
-            <li class="list-group-item">1/4 Kilo</li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <h4 class="text-center">Cucuruchos</h4>
-          <ul class="list-group">
-            <li class="list-group-item">Mini Cucurucho 1 gusto</li>
-            <li class="list-group-item">Cucurucho 2 gustos</li>
-            <li class="list-group-item">Cucurucho Bañado</li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-sm-12">
-          <h4 class="text-center">Vasos</h4>
-          <ul class="list-group">
-            <li class="list-group-item">Vaso 1 gusto</li>
-            <li class="list-group-item">Vaso 2 gustos</li>
-            <li class="list-group-item">Vaso de Pasta</li>
-          </ul>
+        <div v-else>
+          <div v-if="cargando">
+            <div class="spinner-border"></div>
+            <p>Cargando...</p>
+          </div>
+          <div class="table-responsive" v-else>
+            <table id="myTable" class="table table-hover align-middle" onload="checkedCeliacos()">
+              <thead>
+                <tr class="text-center">
+                  <th scope="col">
+                    Id
+                    <i
+                      class="bi bi-arrow-down-up px-2"
+                      onclick="sortTable(0, 'int')"></i>
+                  </th>
+                  <th scope="col">
+                    Nombre
+                    <i
+                      class="bi bi-arrow-down-up px-2"
+                      onclick="sortTable(1, 'str')"></i>
+                  </th>
+                  <th scope="col">
+                    Precio
+                    <i
+                      class="bi bi-arrow-down-up px-2"
+                      onclick="sortTable(2, 'float')"></i>
+                  </th>
+                  <th scope="col">
+                    Stock
+                    <i
+                      class="bi bi-arrow-down-up px-2"
+                      onclick="sortTable(3, 'int')"></i>
+                  </th>
+                  <th scope="col" onclick="checkedCeliacos()">Apto celiacos</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Iterar sobre cada producto -->
+                <tr v-for="producto in productos">
+                  <td class="text-center" scope="row">{{producto.id}}</td>
+                  <td class="px-4">{{producto.nombre}}</td>
+                  <td class="text-center">{{producto.precio}}</td>
+                  <td class="text-center">{{producto.stock}}</td>
+                  <td class="text-center celiaco">{{producto.celiaco}}</td>
+                  <td class="text-center">
+                    <!-- Botón para editar el producto -->
+                    <a
+                      class="btn btn-outline-primary mx-3 my-1"
+                      :href="'producto-update.html?id='+ producto.id"
+                      >Editar</a
+                    >
+                    <!-- Botón para eliminar el producto -->
+                    <button
+                      type="button"
+                      class="btn btn-outline-eliminar"
+                      v-on:click="eliminar(producto.id)">
+                      Eliminar
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--Gustos-->
-    <!-- <div class="gustos">
+      <!--Presentaciones-->
+      <div class="presentaciones">
+        <h2 class="py-3 border-bottom border-primary">
+          Presentaciones
+          <small class="fs-5 text-muted">Nuestros productos</small>
+        </h2>
+        <div class="row">
+          <div class="col-md-3 col-sm-12">
+            <img
+              src="./imagenes/paletas2.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Paletas" />
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <img
+              src="./imagenes/kilo.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Kilo" />
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <img
+              src="./imagenes/productos3.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Cucurucho" />
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <img
+              src="./imagenes/vaso2.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="vasito" />
+          </div>
+        </div>
+
+        <div class="row pb-5">
+          <div class="col-md-3 col-sm-12">
+            <h4 class="text-center">Paletas</h4>
+            <ul class="list-group">
+              <li class="list-group-item">Chocolate Kinder</li>
+              <li class="list-group-item">Chocotorta</li>
+              <li class="list-group-item">Frutilla a la Crema</li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <h4 class="text-center">Kilo</h4>
+            <ul class="list-group">
+              <li class="list-group-item">1 Kilo</li>
+              <li class="list-group-item">1/2 Kilo</li>
+              <li class="list-group-item">1/4 Kilo</li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <h4 class="text-center">Cucuruchos</h4>
+            <ul class="list-group">
+              <li class="list-group-item">Mini Cucurucho 1 gusto</li>
+              <li class="list-group-item">Cucurucho 2 gustos</li>
+              <li class="list-group-item">Cucurucho Bañado</li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <h4 class="text-center">Vasos</h4>
+            <ul class="list-group">
+              <li class="list-group-item">Vaso 1 gusto</li>
+              <li class="list-group-item">Vaso 2 gustos</li>
+              <li class="list-group-item">Vaso de Pasta</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--Gustos-->
+      <!-- <div class="gustos">
       <h2 class="py-3 border-bottom border-primary">
         Gustos
         <small class="fs-5 text-muted">Sabores de helados</small>
@@ -219,19 +281,18 @@
         </div>
       </div>
     </div> -->
+    </main>
 
+    <footer id="footer" class="bg-primary-opacity-8 border-top"></footer>
 
-  </main>
-
-  <footer id="footer" class="bg-primary-opacity-8 border-top"></footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script src="./css/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="./js/main-es.js"></script>
-  <script src="./js/productos.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./css/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/main-es.js"></script>
+    <script src="./js/productos.js"></script>
+    <script src="./js/ordenar.js"></script>
+  </body>
 </html>

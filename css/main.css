@@ -12199,4 +12199,10 @@ p {
   .equipo .equipo__col {
     height: 900px;
   }
+}
+
+/****************** TABLA ******************/
+/* Ordenar tabla */
+.bi-arrow-down-up:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

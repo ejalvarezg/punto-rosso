@@ -88,10 +88,6 @@ document.getElementById("header").innerHTML = `<!-- announcement-bar -->
       <a class="nav-link" href="pedidos.html">Pedidos</a>
     </li>
   </ul>
-  <form class="d-flex my-2 my-lg-0" name="busqueda" method="POST" action="" id="formularioBusqueda">
-    <input class="form-control me-sm-2" type="text" placeholder="Buscar" name="textoBuscado">
-    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
-  </form>
 </div>
 <!-- Fin Menú -->
 </div>
